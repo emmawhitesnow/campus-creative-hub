@@ -1,7 +1,9 @@
-import workPoster from "@/assets/work-poster.jpg";
-import workBranding from "@/assets/work-branding.jpg";
-import workEditorial from "@/assets/work-editorial.jpg";
-import workZine from "@/assets/work-zine.jpg";
+import papaya from "@/assets/art-papaya.jpg";
+import sorbet from "@/assets/art-raspberry-sorbet.jpg";
+import sashimi from "@/assets/art-sashimi.jpg";
+import mango from "@/assets/art-mango-croissant.jpg";
+import dessert from "@/assets/art-more-dessert.jpg";
+import tart from "@/assets/art-glass-tart.jpg";
 
 export type WorkProject = {
   id: string;
@@ -14,39 +16,57 @@ export type WorkProject = {
 
 export const workProjects: WorkProject[] = [
   {
-    id: "campus-fest",
-    title: "Campus Music Festival",
+    id: "more-dessert-please",
+    title: "More Dessert, Please",
+    year: "2025",
+    tags: ["Poster", "Typography", "Photo"],
+    cover: dessert,
+    description:
+      "An editorial poster celebrating peach and burnt almond + butterscotch ice cream from Benu in San Francisco. A study in glossy orange, oversized display type, and the kind of dessert worth designing around.",
+  },
+  {
+    id: "sashimi",
+    title: "Sashimi",
+    year: "2025",
+    tags: ["Illustration", "Lettering"],
+    cover: sashimi,
+    description:
+      "A hand-illustrated study of three glossy nigiri — tuna (maguro) and salmon (sake) — layered with doodles, lettering, and tiny notes for every sushi lover's perfect bite.",
+  },
+  {
+    id: "papaya",
+    title: "Papaya",
     year: "2024",
-    tags: ["Poster", "Typography"],
-    cover: workPoster,
+    tags: ["Illustration", "Fruit Series"],
+    cover: papaya,
     description:
-      "A poster series for the annual student-run music festival. Bold display type, riso-inspired color, and a playful grid that came alive across flyers, social, and merch.",
+      "A Hawaiian papaya bursting with radiant orange hues and tropical freshness. Part of an ongoing series of fruit portraits painted in Procreate.",
   },
   {
-    id: "cafe-brand",
-    title: "Linden & Co. Cafe",
+    id: "mango-croissant",
+    title: "Mango Croissant",
     year: "2024",
-    tags: ["Branding", "Print"],
-    cover: workBranding,
+    tags: ["Illustration", "Café Series"],
+    cover: mango,
     description:
-      "Identity system for a small campus cafe — wordmark, packaging, and a palette pulled from morning light through linen curtains.",
+      "A buttery golden croissant filled with juicy mango — a dreamy treat for cozy café daydreams. Painted with attention to texture, lamination, and the way fruit catches the light.",
   },
   {
-    id: "literary-mag",
-    title: "Margins, Issue 03",
-    year: "2023",
-    tags: ["Editorial", "Layout"],
-    cover: workEditorial,
+    id: "raspberry-sorbet",
+    title: "Raspberry Sorbet",
+    year: "2024",
+    tags: ["Illustration", "Dessert Series"],
+    cover: sorbet,
     description:
-      "Art direction and layout for the student literary magazine. Quiet typography, generous margins, and full-bleed photography to let the writing breathe.",
+      "Two scoops of vibrant Italian raspberry sorbet to melt into summer afternoons. A quiet little still life with paper layers and pink polka dots.",
   },
   {
-    id: "field-zine",
-    title: "Field Notes Zine",
-    year: "2023",
-    tags: ["Illustration", "Zine"],
-    cover: workZine,
+    id: "glass-tart",
+    title: "Glass Tart",
+    year: "2024",
+    tags: ["Illustration", "Bakery Series"],
+    cover: tart,
     description:
-      "A self-published zine of botanical illustrations and observational drawings collected over a semester of slow walks.",
+      "A slice of Japanese apple jelly tart for all your whimsical bakery dreams — glossy ruby red, perched on a paper liner, decorated with a hand-lettered apple tag.",
   },
 ];

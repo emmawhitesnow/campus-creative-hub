@@ -6,16 +6,17 @@ import { prints } from "@/data/prints";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Maren Ellis — Designer & Illustrator" },
+      { title: "art by emmah — Illustration & Design by Emma H." },
       {
         name: "description",
         content:
-          "Designer and illustrator based on campus. Editorial design, hand-drawn prints, and the occasional zine.",
+          "Hand-painted food illustrations and editorial design by Emma H. — an artist based in Silicon Valley and studying English at Dartmouth College.",
       },
-      { property: "og:title", content: "Maren Ellis — Designer & Illustrator" },
+      { property: "og:title", content: "art by emmah — Illustration & Design" },
       {
         property: "og:description",
-        content: "Editorial design and warm, hand-drawn prints from a student studio.",
+        content:
+          "Hand-painted food illustrations and editorial design by Emma H.",
       },
     ],
   }),
@@ -32,16 +33,17 @@ function HomePage() {
       <section className="grid gap-10 py-20 md:grid-cols-12 md:py-32">
         <div className="md:col-span-8">
           <p className="mb-6 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-            Portfolio · Est. 2023
+            Illustration · Design · Silicon Valley → Dartmouth
           </p>
           <h1 className="font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-8xl">
-            Hi, I'm Maren — a designer & illustrator making{" "}
-            <span className="italic text-primary">soft, considered</span> work on campus.
+            Hi, I'm Emma — painting{" "}
+            <span className="italic text-primary">glossy, hungry</span> little
+            portraits of the food I love.
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            I study design at Linden College, where I make posters, zines, and
-            illustrated prints. This is a small home for the work — and the
-            prints I sell through INPRNT.
+            I'm an artist, illustrator, and graphic designer based in Silicon
+            Valley and studying English at Dartmouth. This is a small home for
+            the work — and the prints I sell through INPRNT.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
@@ -81,10 +83,7 @@ function HomePage() {
           </Link>
         </div>
         <div className="grid gap-8 md:grid-cols-12">
-          <Link
-            to="/work"
-            className="group md:col-span-7"
-          >
+          <Link to="/work" className="group md:col-span-7">
             <div className="overflow-hidden rounded-sm bg-muted">
               <img
                 src={featuredWork[0].cover}
@@ -152,14 +151,14 @@ function HomePage() {
                   src={p.image}
                   alt={p.title}
                   width={1024}
-                  height={1280}
+                  height={1024}
                   loading="lazy"
-                  className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                  className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 />
               </div>
               <div className="mt-3">
                 <h3 className="font-serif text-base">{p.title}</h3>
-                <p className="text-xs text-muted-foreground">From {p.priceFrom}</p>
+                <p className="text-xs text-muted-foreground">{p.category}</p>
               </div>
             </Link>
           ))}
@@ -171,8 +170,8 @@ function HomePage() {
       {/* About teaser */}
       <section className="py-24 text-center">
         <p className="mx-auto max-w-3xl font-serif text-3xl leading-snug text-foreground md:text-4xl">
-          "Most of what I make starts as a doodle in the margins — of a
-          notebook, a recipe, a Tuesday afternoon."
+          "Drawing the things I'd most like to eat — one glossy, slightly
+          impractical portrait at a time."
         </p>
         <Link
           to="/about"

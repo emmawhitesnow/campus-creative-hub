@@ -1,63 +1,82 @@
-import florals from "@/assets/print-florals.jpg";
-import abstract from "@/assets/print-abstract.jpg";
-import type1 from "@/assets/print-type.jpg";
-import mug from "@/assets/print-mug.jpg";
+import papaya from "@/assets/art-papaya.jpg";
+import sorbet from "@/assets/art-raspberry-sorbet.jpg";
+import sashimi from "@/assets/art-sashimi.jpg";
+import mango from "@/assets/art-mango-croissant.jpg";
+import dessert from "@/assets/art-more-dessert.jpg";
+import tart from "@/assets/art-glass-tart.jpg";
 
-export type PrintCategory = "Florals" | "Abstract" | "Typography" | "Illustration";
+export type PrintCategory = "Fruit" | "Dessert" | "Savory" | "Poster";
 
 export type Print = {
   id: string;
   title: string;
   category: PrintCategory;
-  sizes: string;
-  priceFrom: string;
+  description: string;
   image: string;
   inprntUrl: string;
 };
 
 export const prints: Print[] = [
   {
-    id: "wild-poppies",
-    title: "Wild Poppies",
-    category: "Florals",
-    sizes: "8×10 · 12×16 · 18×24",
-    priceFrom: "$22",
-    image: florals,
-    inprntUrl: "https://www.inprnt.com/",
+    id: "papaya",
+    title: "Papaya",
+    category: "Fruit",
+    description:
+      "A Hawaiian papaya bursting with radiant orange hues and tropical freshness.",
+    image: papaya,
+    inprntUrl: "https://www.inprnt.com/gallery/artbyemmah/",
   },
   {
-    id: "morning-shapes",
-    title: "Morning Shapes",
-    category: "Abstract",
-    sizes: "8×10 · 12×16 · 18×24",
-    priceFrom: "$22",
-    image: abstract,
-    inprntUrl: "https://www.inprnt.com/",
+    id: "raspberry-sorbet",
+    title: "Raspberry Sorbet",
+    category: "Dessert",
+    description:
+      "Two scoops of vibrant Italian raspberry sorbet to melt into summer afternoons.",
+    image: sorbet,
+    inprntUrl: "https://www.inprnt.com/gallery/artbyemmah/",
   },
   {
-    id: "soft-hours",
-    title: "Soft Hours",
-    category: "Typography",
-    sizes: "8×10 · 12×16",
-    priceFrom: "$20",
-    image: type1,
-    inprntUrl: "https://www.inprnt.com/",
+    id: "sashimi",
+    title: "Sashimi",
+    category: "Savory",
+    description:
+      "A selection of three glossy nigiri — tuna (maguro) and salmon (sake) — adorned with doodles for every sushi lover's perfect bite.",
+    image: sashimi,
+    inprntUrl: "https://www.inprnt.com/gallery/artbyemmah/",
   },
   {
-    id: "first-cup",
-    title: "First Cup",
-    category: "Illustration",
-    sizes: "5×7 · 8×10 · 12×16",
-    priceFrom: "$18",
-    image: mug,
-    inprntUrl: "https://www.inprnt.com/",
+    id: "mango-croissant",
+    title: "Mango Croissant",
+    category: "Dessert",
+    description:
+      "A buttery golden croissant filled with juicy mango — a dreamy treat for your cozy café daydreams.",
+    image: mango,
+    inprntUrl: "https://www.inprnt.com/gallery/artbyemmah/",
+  },
+  {
+    id: "more-dessert-please",
+    title: "More Dessert, Please",
+    category: "Poster",
+    description:
+      "Glossy orange dessert poster featuring peach and burnt almond + butterscotch ice cream from Benu, San Francisco.",
+    image: dessert,
+    inprntUrl: "https://www.inprnt.com/gallery/artbyemmah/",
+  },
+  {
+    id: "glass-tart",
+    title: "Glass Tart",
+    category: "Dessert",
+    description:
+      "A slice of Japanese apple jelly tart for all your whimsical bakery dreams.",
+    image: tart,
+    inprntUrl: "https://www.inprnt.com/gallery/artbyemmah/",
   },
 ];
 
 export const categories: ("All" | PrintCategory)[] = [
   "All",
-  "Florals",
-  "Abstract",
-  "Typography",
-  "Illustration",
+  "Fruit",
+  "Dessert",
+  "Savory",
+  "Poster",
 ];
