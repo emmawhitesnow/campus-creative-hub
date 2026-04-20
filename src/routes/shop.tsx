@@ -6,16 +6,16 @@ import { prints, categories, type PrintCategory } from "@/data/prints";
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
-      { title: "Shop — Prints by Maren Ellis" },
+      { title: "Shop — art by emmah" },
       {
         name: "description",
         content:
-          "Hand-drawn art prints — florals, abstract shapes, typography, and illustrations. Fulfilled and shipped by INPRNT.",
+          "Hand-painted food illustration prints by Emma H. — fruit, desserts, and a little sushi. Fulfilled and shipped worldwide by INPRNT.",
       },
-      { property: "og:title", content: "Shop — Prints by Maren Ellis" },
+      { property: "og:title", content: "Shop — art by emmah" },
       {
         property: "og:description",
-        content: "Hand-drawn art prints fulfilled by INPRNT.",
+        content: "Hand-painted food illustration prints fulfilled by INPRNT.",
       },
     ],
   }),
@@ -75,18 +75,20 @@ function ShopPage() {
                 src={p.image}
                 alt={p.title}
                 width={1024}
-                height={1280}
+                height={1024}
                 loading="lazy"
-                className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               />
             </a>
             <div className="mt-4">
               <div className="flex items-baseline justify-between gap-4">
                 <h2 className="font-serif text-xl">{p.title}</h2>
-                <span className="text-sm text-foreground">From {p.priceFrom}</span>
+                <span className="text-xs uppercase tracking-wider text-muted-foreground">
+                  {p.category}
+                </span>
               </div>
-              <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
-                {p.category} · {p.sizes}
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {p.description}
               </p>
               <a
                 href={p.inprntUrl}

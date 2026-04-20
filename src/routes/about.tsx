@@ -1,21 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "@/assets/art-papaya.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Maren Ellis" },
+      { title: "About — art by emmah" },
       {
         name: "description",
         content:
-          "About Maren Ellis: a design student making editorial work, illustrated prints, and the occasional good loaf of sourdough.",
+          "Emma H. is an artist, illustrator, and graphic designer based in Silicon Valley and studying English at Dartmouth College.",
       },
-      { property: "og:title", content: "About — Maren Ellis" },
+      { property: "og:title", content: "About — art by emmah" },
       {
         property: "og:description",
-        content: "About Maren Ellis — design student, illustrator, baker.",
+        content:
+          "Emma H. — artist, illustrator, and graphic designer based in Silicon Valley.",
       },
-      { property: "og:image", content: portrait },
     ],
   }),
   component: AboutPage,
@@ -29,10 +29,10 @@ function AboutPage() {
           <div className="overflow-hidden rounded-sm bg-muted">
             <img
               src={portrait}
-              alt="Portrait of Maren in the studio"
+              alt="Papaya illustration by Emma H."
               width={1024}
-              height={1280}
-              className="aspect-[4/5] w-full object-cover"
+              height={1024}
+              className="aspect-square w-full object-cover"
             />
           </div>
         </div>
@@ -42,26 +42,24 @@ function AboutPage() {
             About
           </p>
           <h1 className="font-serif text-4xl font-medium leading-tight tracking-tight md:text-5xl">
-            I'm Maren — a junior at Linden College studying graphic design.
+            I'm Emma — an artist, illustrator, and graphic designer.
           </h1>
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-foreground/90">
             <p>
-              Most of my work lives somewhere between editorial design and
-              illustration. I love a quiet layout, a generous margin, and type
-              that takes its time. On weekends I'm probably drawing in a coffee
-              shop or testing a new sourdough recipe (I am, very slowly,
-              becoming the kind of person who has a starter named Doris).
+              I'm based in Silicon Valley and studying English at Dartmouth
+              College. I'm experienced in the visual arts, including
+              educational, collegial, and commissional work.
             </p>
             <p>
-              On campus I've worked with the student literary magazine, the
-              music society, and a couple of local cafes. Off campus I sell
-              open-edition prints through INPRNT — proceeds mostly go to more
-              paper and the occasional good pen.
+              Most of what I make these days is food — glossy fruit, small
+              desserts, the occasional plate of nigiri. I love painting things
+              that catch the light, and I keep a steady habit of doodling in
+              the margins of everything else.
             </p>
             <p>
-              I'm always up for collaborations on posters, zines, branding for
-              small projects, or anything that involves making something with
-              care.
+              I'm always up for collaborations — editorial illustration,
+              posters, branding for small projects, or anything that involves
+              making something with care.
             </p>
           </div>
 
@@ -72,21 +70,21 @@ function AboutPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:emmah.doodles@gmail.com"
                 className="inline-flex items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
-                hello@marenellis.com
+                emmah.doodles@gmail.com
               </a>
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/artby.emmah/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center rounded-full border border-foreground/20 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
               >
-                Instagram
+                @artby.emmah
               </a>
               <a
-                href="https://www.inprnt.com/"
+                href="https://www.inprnt.com/gallery/artbyemmah/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center rounded-full border border-foreground/20 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"

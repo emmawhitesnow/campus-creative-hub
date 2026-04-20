@@ -6,16 +6,16 @@ import { X } from "lucide-react";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Work — Maren Ellis" },
+      { title: "Work — art by emmah" },
       {
         name: "description",
         content:
-          "Selected design and illustration projects: posters, branding, editorial layouts, and zines made on campus.",
+          "Selected illustration and design work by Emma H. — food portraits, posters, and editorial illustration.",
       },
-      { property: "og:title", content: "Work — Maren Ellis" },
+      { property: "og:title", content: "Work — art by emmah" },
       {
         property: "og:description",
-        content: "Selected campus design projects from Maren Ellis.",
+        content: "Selected illustration and design work by Emma H.",
       },
     ],
   }),
@@ -35,8 +35,8 @@ function WorkPage() {
           Work from the studio.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          A growing collection of design and illustration from coursework,
-          campus collaborations, and self-initiated projects.
+          A growing collection of food illustrations, posters, and editorial
+          work — painted in Procreate and finished in Adobe.
         </p>
       </header>
 

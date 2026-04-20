@@ -5,7 +5,7 @@ export function SiteHeader() {
     <header className="border-b border-border/60 bg-background/80 backdrop-blur-sm sticky top-0 z-40">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link to="/" className="font-serif text-xl tracking-tight text-foreground">
-          Maren Ellis<span className="text-primary">.</span>
+          art by emmah<span className="text-primary">.</span>
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link
